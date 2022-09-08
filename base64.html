@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<title>base64 decoder</title>
+	<script>
+		window.addEventListener('input', function (e) {
+			document.getElementsByName("insert").forEach(function(value) {
+				value.innerHTML = btoa(document.getElementById("userInput").value);
+			})
+		}, false);
+	</script>
+	<script>
+		window.addEventListener('input', function (e) {
+			document.getElementsByName("insert2").forEach(function(value) {
+				value.innerHTML = atob(document.getElementById("userInput").value);
+			})
+		}, false);
+	</script>
+	<script>
+		window.addEventListener('input', function (e) {
+			document.getElementsByName("insert").forEach(function(value) {
+				value.innerHTML = btoa(document.getElementById("fileinput").value);
+			})
+		}, false);
+	</script>
+	<script>
+		window.addEventListener('input', function (e) {
+			document.getElementsByName("insert2").forEach(function(value) {
+				value.innerHTML = atob(document.getElementById("fileinput").value);
+			})
+		}, false);
+	</script>
+	<link rel="icon" type="image/jpeg" href="/C5C4426C-A900-4110-888B-9AD7B33AE8E6.jpeg"> 
+</head>
+<body>
+	<header id="header">
+		<h1>base64 decoder</h1>
+		<input type="text" id="userInput" value="I Love Balls!1!!1!!!1!!"></input>
+		<input type="file" id="fileinput"></input>
+	</header>
+	<main>
+	<p><b name="insert">encoded text</b>
+		</p>
+	<p><b name="insert2">decoded text</b>
+		</p>
+	<p><b name="insert3">encoded file</b>
+		</p>
+	<p><b name="insert4">decoded file</b>
+		</p>
+	</main>
+</body>

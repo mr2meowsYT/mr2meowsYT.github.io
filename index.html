@@ -22,10 +22,21 @@ var brownNoise = (function() {
 
 brownNoise.connect(audioContext.destination);
   </script>
+  <style>
+	body {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
+	h1   {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
+	p    {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
+	a    {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
+</style>
+</head>
+<body style="background-color:BlueViolet;" onload="startTime()">
+<h1>funny website</h1>
+<br> </br>
+<a id="balls">if you see this the clock isnt work</a>
 <script>
 function startTime() {
-  tim = checkTime(new Date());
-  document.getElementById('txt').innerHTML =  "the time is" + tim
+  let tim = checkTime(new Date());
+  document.getElementById('balls').textContent =  "the time is " + tim;
   setTimeout(startTime, 1000);
 }
 
@@ -34,17 +45,6 @@ function checkTime(i) {
   return i;
 }
 </script>
-  <style>
-	body {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
-	h1   {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
-	p    {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
-	a    {font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;}
-</style>
-</head>
-<body style="background-color:BlueViolet;">
-<h1>funny website</h1>
-<br> </br>
-<a id="txt"></a>
 <br> </br>
 <br> </br>
 <br> </br>
@@ -96,3 +96,4 @@ function checkTime(i) {
 <br></br>
 <h1>BOTTOM TEXT</h1>
 </body>
+

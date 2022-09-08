@@ -3,6 +3,25 @@
   <title>funny website 🤣 </title>
   <link rel="icon" type="image/jpeg" href="/C5C4426C-A900-4110-888B-9AD7B33AE8E6.jpeg">
   <meta name="google-site-verification" content="3qxzts4mFObSGtmS8ntNKYtiOI01w_MQSIDMCjg3kAU" />
+  <script>
+    var bufferSize = 4096;
+var brownNoise = (function() {
+    var lastOut = 0.0;
+    var node = audioContext.createScriptProcessor(bufferSize, 1, 1);
+    node.onaudioprocess = function(e) {
+        var output = e.outputBuffer.getChannelData(0);
+        for (var i = 0; i < bufferSize; i++) {
+            var white = Math.random() * 2 - 1;
+            output[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = output[i];
+            output[i] *= 3.5; // (roughly) compensate for gain
+        }
+    }
+    return node;
+})();
+
+brownNoise.connect(audioContext.destination);
+  </script>
 </head>
 <h1>funny website</h1>
 <br> </br>
